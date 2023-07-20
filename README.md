@@ -1,4 +1,6 @@
-# Docker container image for Nix packagemanager on Ubuntu
+# Dev Container image for Nix package manager on Ubuntu
+
+Now implemented only for vscode
 
 ## Motivation
 

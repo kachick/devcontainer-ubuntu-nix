@@ -49,7 +49,7 @@ RUN ./setup_direnv.bash
 RUN rm ./flake.nix ./setup_direnv.bash
 
 # `ENTRYPOINT` and `CMD` will be ignored in .devcontainer. Use postCreateCommand instead
-# To simulate in docker, following CMD requires to specify PWD with repository files. Check `makers docker-shell`
+# To simulate in docker, following CMD requires to specify PWD with repository files. Check `task shell`
 COPY .devcontainer/bootstrap.bash /home/vscode/
 COPY .devcontainer/shell.bash /home/vscode/
 CMD ["/home/vscode/shell.bash"]

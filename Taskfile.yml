@@ -1,0 +1,36 @@
+# https://taskfile.dev
+
+version: '3'
+
+tasks:
+  default:
+    deps:
+      - task: lint
+      - task: build
+  build:
+    cmds:
+      - ./scripts/docker_build.bash
+  shell:
+    cmds:
+      - ./scripts/docker_shell.bash
+  fmt:
+    cmds:
+      - typos . .github .vscode .devcontainer --write-changes
+      - dprint fmt
+      - nixpkgs-fmt ./*.nix
+  lint:
+    # go fmt does not have option for no effect - https://github.com/golang/go/issues/41189
+    cmds:
+      - dprint check
+      - typos . .github .vscode .devcontainer
+      - nixpkgs-fmt --check ./*.nix
+      - 'actionlint'
+      - 'hadolint .devcontainer/Dockerfile'
+  deps:
+    cmds:
+      - nix --version
+      - task --version
+      - dprint --version
+      - actionlint --version
+      - typos --version
+      - hadolint --version

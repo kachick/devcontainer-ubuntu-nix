@@ -14,12 +14,13 @@
           mkShell {
             buildInputs = [
               dprint
-              cargo-make
+              go-task
               nil
               nixpkgs-fmt
               typos
               actionlint
               hadolint
+              coreutils
             ];
           };
       });
