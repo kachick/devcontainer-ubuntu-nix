@@ -18,7 +18,6 @@
               nil
               nixpkgs-fmt
               typos
-              actionlint
               hadolint
               coreutils
             ];

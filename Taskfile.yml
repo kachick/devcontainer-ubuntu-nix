@@ -24,13 +24,11 @@ tasks:
       - dprint check
       - typos . .github .vscode .devcontainer
       - nixpkgs-fmt --check ./*.nix
-      - 'actionlint'
       - 'hadolint .devcontainer/Dockerfile'
   deps:
     cmds:
       - nix --version
       - task --version
       - dprint --version
-      - actionlint --version
       - typos --version
       - hadolint --version
