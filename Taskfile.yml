@@ -6,7 +6,8 @@ tasks:
   default:
     deps:
       - task: lint
-      - task: build
+      # Do not include build here, Can't run in devcontainer itself
+      # - task: build
   build:
     cmds:
       - ./scripts/docker_build.bash
