@@ -1,6 +1,7 @@
 # Dev Container image for Nix package manager on Ubuntu
 
-Now implemented only for vscode
+I'm not active this repository now.\
+Using [systemd image for nix](https://github.com/kachick/containers/tree/cb627b7edb024860a4869198caf260d0e34ba6e0/images/ubuntu-nix-systemd).
 
 ## Motivation
 
