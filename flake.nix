@@ -36,6 +36,7 @@
               dprint
               typos
 
+              # TODO: Replace with trivy
               hadolint
               coreutils
             ];
